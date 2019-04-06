@@ -35,7 +35,7 @@ class Give4Each::MethodChain
     super
   end
   
-  def respond_to? f
+  def respond_to?(f, include_all = false)
     super or Proc.instance_methods.include? f.to_sym
   end
   
